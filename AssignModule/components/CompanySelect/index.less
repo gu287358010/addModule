@@ -1,0 +1,51 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dropdownWrap {
+  .dropdownHeader:extend(.item) {
+  }
+
+  .dropdownItem:extend(.item) {
+    cursor: pointer;
+
+    .desc {
+      color: rgba(0, 0, 0, 0.45);
+    }
+
+    &:hover {
+      background-color: #f5f5f5 !important;
+    }
+  }
+
+  .dropdownFooter {
+    padding: 12px 0;
+    color: #687db4;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+
+  :global {
+    .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+      background-color: #fff;
+    }
+    .ant-select-item-empty {
+      display: none;
+    }
+  }
+
+  .priceWrap {
+    .companyVal {
+      margin-bottom: 6px;
+      color: rgba(0, 0, 0, 0.45);
+    }
+  }
+}

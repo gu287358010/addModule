@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.operate {
+  position: absolute;
+  top: 16px;
+  right: 0;
+
+  .operateInner {
+    position: absolute;
+    top: 18px;
+    display: flex;
+  }
+
+  .operateIcon {
+    margin-left: 12px;
+    color: rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+  }
+}
+
+.routeCon {
+  position: relative;
+}
+
+.timeLine {
+  position: absolute;
+  top: 4px;
+  left: -40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 16px;
+
+  .line {
+    width: 1px;
+    height: 27px;
+    margin: 16px 0;
+    border: 1px dashed rgba(0, 0, 0, 0.25);
+    transform: scaleY(2);
+  }
+}

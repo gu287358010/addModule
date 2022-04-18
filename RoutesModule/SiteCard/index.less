@@ -1,0 +1,160 @@
+.SiteCard {
+  margin-bottom: 24px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 12px;
+  .deleteIcon {
+    display: none;
+    cursor: pointer;
+  }
+  &:hover .deleteIcon {
+    display: block;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .requireMark {
+    margin-left: 2px;
+    &::after {
+      display: inline-block;
+      width: 8px;
+      color: #e94444;
+      font-size: 12px;
+      font-family: SimSun, sans-serif;
+      content: '*';
+    }
+  }
+  .error {
+    color: #e94444;
+  }
+  .label {
+    display: inline-flex;
+    align-items: center;
+    .order {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      color: #62738c;
+      line-height: 24px;
+      text-align: center;
+      border: 1px solid #62738c;
+      border-radius: 16px;
+      border-radius: 9px;
+    }
+  }
+  .timeWrap {
+    margin-top: 5px;
+    margin-left: 34px;
+  }
+  .operateWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-left: 32px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    .operate {
+      display: none;
+      margin-left: 16px;
+      color: #687db4;
+      cursor: pointer;
+    }
+    &:hover {
+      background: #f2f3f7;
+      .operate {
+        display: block;
+      }
+    }
+  }
+  .addressWrap {
+    .addressBox {
+      flex: 1;
+      overflow: hidden;
+    }
+    .address {
+      // overflow: hidden;
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 500;
+      font-size: 16px;
+      // white-space: nowrap;
+      // text-overflow: ellipsis;
+    }
+  }
+  .goodsWrap {
+    display: flex;
+    margin-top: 14px;
+    margin-left: 36px;
+    .line {
+      width: 3px;
+      margin-right: 8px;
+      border-radius: 4px;
+    }
+    .goodsCon {
+      flex: 1;
+    }
+    .goodsLabel {
+      display: flex;
+      justify-content: space-between;
+    }
+    .goodsItem {
+      margin-top: 8px;
+      padding: 6px 10px;
+      background: #f2f3f7;
+      border-radius: 6px;
+    }
+    &.sendGoodsWrap {
+      .line {
+        background-color: #93dcdc;
+      }
+      :global {
+        .detailGoodsItemHover {
+          background-color: #93dcdc;
+        }
+      }
+      .goodsItem {
+        &:hover {
+          background-color: #93dcdc;
+        }
+      }
+    }
+    &.dischargeGoodsWrap {
+      .line {
+        background-color: #f8cfcf;
+      }
+      :global {
+        .detailGoodsItemHover {
+          background-color: #f8cfcf;
+        }
+      }
+      .goodsItem {
+        &:hover {
+          background-color: #f8cfcf;
+        }
+      }
+    }
+  }
+  .operateInner {
+    position: relative;
+    .errTip {
+      position: relative;
+      right: -12px;
+      padding: 5px 8px;
+      color: #fff;
+      background-color: #e94444;
+      border-radius: 6px;
+      box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: -6px;
+        width: 8px;
+        height: 8px;
+        background-color: #e94444;
+        transform: rotate(45deg) translateY(-50%);
+        content: ' ';
+      }
+    }
+  }
+}

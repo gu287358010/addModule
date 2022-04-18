@@ -1,0 +1,126 @@
+.GoodsFormCard {
+  margin: 0 -18px 0;
+  padding: 0 16px 8px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: border-color 0.3s;
+
+  &:hover {
+    background-color: #fafafa;
+    border: 2px solid #a0c6ff;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 12px;
+  }
+
+  &:hover .delete {
+    visibility: visible;
+  }
+}
+.link {
+  color: #687db4;
+  cursor: pointer;
+}
+
+:global {
+  .goodsFormCardSelect {
+    padding: 13px 11px !important;
+    border: 2px solid #a0c6ff !important;
+  }
+}
+
+.collapsedWrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 14px 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #fafafa;
+  border: 1px solid #e7e9ef;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+
+  &:hover {
+    padding: 13px 11px;
+    border: 2px solid #a0c6ff;
+  }
+  &.errorCollapseWrap {
+    padding: 13px 11px;
+    border: 2px solid #eda914;
+  }
+  &:hover .delete {
+    visibility: visible;
+  }
+
+  .left {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .itemAddress {
+    display: flex;
+    align-items: center;
+    max-width: 62%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .itemGoods {
+    margin-right: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .requestNo {
+    min-width: 20%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .addrWrap {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    overflow: hidden;
+  }
+
+  .address {
+    max-width: 46%;
+    margin: 0 8px;
+    padding: 2px 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: rgba(204, 204, 204, 0.35);
+    border-radius: 6px;
+  }
+}
+
+.operateWrap {
+  :global {
+    .anticon {
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+  .delete {
+    visibility: hidden;
+  }
+}
+
+.goodsLabel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 12px;
+}

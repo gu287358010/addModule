@@ -1,0 +1,61 @@
+@import '~antd/es/style/themes/index';
+
+@disabled-color: #1a2b4e;
+
+.ItemSelect {
+  position: relative;
+  padding: 6px 12px;
+  background-color: fade(@disabled-color, 6%);
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    border-color: @primary-color;
+  }
+  &.itemSelectActived {
+    background: fade(@primary-color, 13%);
+    border-color: @primary-color;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid @primary-color;
+      border-radius: 6px;
+      animation: ani 0.36s ease-in-out;
+      animation-fill-mode: both;
+      content: '';
+    }
+  }
+  &.itemSelectDisabled {
+    color: fade(@disabled-color, 20%);
+    cursor: not-allowed;
+    &:hover {
+      border-color: transparent;
+    }
+    &.itemSelectActived {
+      background-color: fade(@disabled-color, 6%);
+      border-color: fade(@disabled-color, 60%);
+    }
+  }
+  .suffixTooltip {
+    position: relative;
+    z-index: 9;
+  }
+}
+
+@keyframes ani {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,189 @@
+.EditTable {
+  position: relative;
+  :global {
+    .ant-table {
+      border-radius: 6px 6px 0 0;
+      .ant-table-container {
+        border-color: #d9d9d9 !important;
+      }
+      th {
+        padding: 5px 8px !important;
+        color: rgba(0, 0, 0, 0.65);
+        font-weight: 500;
+        font-size: 12px !important;
+        border-color: #d9d9d9 !important;
+      }
+      td {
+        padding: 0 8px;
+        color: rgba(0, 0, 0, 0.65);
+        border-color: #d9d9d9 !important;
+      }
+    }
+    .ant-table-tbody > tr.ant-table-row:hover > td {
+      background-color: #fff;
+    }
+  }
+  .cellInput {
+    display: flex;
+    align-items: center;
+    height: 34px;
+    margin: 0 -8px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    &.cellInputDisabled {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+      .cellInputText {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .lastCell {
+    position: relative;
+    height: 22px;
+
+    .desc {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .lastCellOperate {
+      position: absolute;
+      top: 4px;
+      right: -23px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+
+  .errorIcon {
+    margin-right: 8px;
+    margin-left: 4px;
+    color: #ff4d4f;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .editCellRequired {
+    &::after {
+      display: inline-block;
+      width: 8px;
+      margin-left: 2px;
+      color: #e94444;
+      font-size: 12px;
+      font-family: SimSun, sans-serif;
+      content: '*';
+    }
+  }
+  .cellInputText {
+    width: 100%;
+    height: 22px;
+    padding: 0 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
+  .operateWrap {
+    padding: 5px 16px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 0;
+    border-radius: 0 0 6px 6px;
+  }
+  .editSelect {
+    padding: 0 8px !important;
+    color: rgba(0, 0, 0, 0.65);
+    :global {
+      .ant-select-selector {
+        padding: 0 !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        .ant-select-selection-item {
+          padding-right: 16px;
+        }
+      }
+      .ant-select-arrow {
+        right: 8px;
+      }
+    }
+  }
+  .editInput,
+  .editInputNum {
+    padding: 0 8px !important;
+    color: rgba(0, 0, 0, 0.65);
+    border: 0 !important;
+    box-shadow: none !important;
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+  .editInputNum {
+    :global {
+      input {
+        padding: 0;
+        color: rgba(0, 0, 0, 0.65);
+      }
+      .ant-input-number-handler-wrap {
+        display: none;
+      }
+      .ant-input-number-input {
+        height: auto;
+      }
+    }
+  }
+  .unitInputNumber {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .editSelect {
+      color: rgba(0, 0, 0, 0.45);
+    }
+    :global {
+      input {
+        padding: 0;
+        color: rgba(0, 0, 0, 0.65);
+      }
+    }
+  }
+  .footer {
+    display: table;
+    width: 100%;
+    padding: 8px 0 0;
+    color: rgba(0, 0, 0, 0.25);
+    table-layout: fixed;
+    div {
+      display: table-cell;
+      padding: 0 8px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      border-right: 1px solid transparent;
+    }
+  }
+  .deleteTable {
+    position: absolute;
+    top: 35px;
+    right: -14px;
+    .deleteWrap {
+      height: 35px;
+    }
+    .deleteIcon {
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 12px;
+    }
+  }
+
+  .priceOperate {
+    display: flex;
+    justify-content: space-between;
+
+    .priceShow {
+      flex: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.AddrSelectModal {
+  .header {
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  :global {
+    .ant-form {
+      .ant-form-item {
+        flex-direction: column;
+        margin-bottom: 18px;
+      }
+      .ant-form-item-label {
+        text-align: left;
+        label {
+          height: 100%;
+          margin-bottom: 4px;
+          font-size: 12px;
+
+          &.ant-form-item-required::after {
+            margin-top: 2px !important;
+            font-size: 14px;
+          }
+        }
+      }
+      .ant-form-item-with-help {
+        margin-bottom: 0;
+      }
+      .ant-form-item-explain {
+        min-height: 18px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .btns {
+    margin-top: 48px;
+    text-align: right;
+  }
+}
